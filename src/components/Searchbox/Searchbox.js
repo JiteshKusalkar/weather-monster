@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import Autosuggest from 'react-autosuggest';
 
 import data from '../../data/weather.json';
+import { escape } from '../../utils/common.js';
 
 const Searchbox = ({ id, onSuggestionSelect }) => {
   const cities = data.map(cityData => ({
@@ -25,7 +26,13 @@ const Searchbox = ({ id, onSuggestionSelect }) => {
   // To empty the input string on suggestion click
   const getSuggestionValue = suggestion => '';
 
-  const renderSuggestion = suggestion => <div>{suggestion.name}</div>;
+  const renderSuggestion = suggestion => {
+    let suggestionLabel = suggestion.name;
+    const queryRegex = new RegExp(escape(value), 'ig');
+    suggestionLabel = suggestionLabel.replace(queryRegex, '<b>$&</b>');
+
+    return <Suggestion dangerouslySetInnerHTML={{ __html: suggestionLabel }} />;
+  };
 
   const onChange = (event, { newValue }) => {
     setValue(newValue);
@@ -100,3 +107,5 @@ const Wrapper = styled.div`
     }
   }
 `;
+
+const Suggestion = styled.div``;
