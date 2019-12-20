@@ -1,0 +1,212 @@
+[
+  {
+    "city": {
+      "id": 1283240,
+      "name": "Kathmandu",
+      "findname": "KATHMANDU",
+      "country": "NP",
+      "coord": { "lon": 85.316666, "lat": 27.716667 },
+      "zoom": 7
+    }
+  },
+  {
+    "city": {
+      "id": 3632308,
+      "name": "Merida",
+      "findname": "MERIDA",
+      "country": "VE",
+      "coord": { "lon": -71.144997, "lat": 8.598333 },
+      "zoom": 8
+    }
+  },
+  {
+    "city": {
+      "id": 1280737,
+      "name": "Lhasa",
+      "findname": "LHASA",
+      "country": "CN",
+      "coord": { "lon": 91.099998, "lat": 29.65 },
+      "zoom": 6
+    }
+  },
+  {
+    "city": {
+      "id": 745042,
+      "name": "İstanbul",
+      "findname": "İSTANBUL",
+      "country": "TR",
+      "coord": { "lon": 28.983311, "lat": 41.03508 },
+      "zoom": 1
+    }
+  },
+  {
+    "city": {
+      "id": 3496831,
+      "name": "Mao",
+      "findname": "MAO",
+      "country": "DO",
+      "coord": { "lon": -71.078133, "lat": 19.551861 },
+      "zoom": 10
+    }
+  },
+  {
+    "city": {
+      "id": 523523,
+      "name": "Nalchik",
+      "findname": "NALCHIK",
+      "country": "RU",
+      "coord": { "lon": 43.618889, "lat": 43.498058 },
+      "zoom": 8
+    }
+  },
+  {
+    "city": {
+      "id": 2267057,
+      "name": "Lisbon",
+      "findname": "LISBON",
+      "country": "PT",
+      "coord": { "lon": -9.13333, "lat": 38.716671 },
+      "zoom": 7
+    }
+  },
+  {
+    "city": {
+      "id": 3082707,
+      "name": "Walbrzych",
+      "findname": "WALBRZYCH",
+      "country": "PL",
+      "coord": { "lon": 16.284321, "lat": 50.771412 },
+      "zoom": 8
+    }
+  },
+  {
+    "city": {
+      "id": 3091150,
+      "name": "Naklo nad Notecia",
+      "findname": "NAKLO NAD NOTECIA",
+      "country": "PL",
+      "coord": { "lon": 17.60181, "lat": 53.142139 },
+      "zoom": 9
+    }
+  },
+  {
+    "city": {
+      "id": 1784658,
+      "name": "Zhengzhou",
+      "findname": "ZHENGZHOU",
+      "country": "CN",
+      "coord": { "lon": 113.648613, "lat": 34.757778 },
+      "zoom": 6
+    }
+  },
+  {
+    "city": {
+      "id": 1348747,
+      "name": "Bankra",
+      "findname": "BANKRA",
+      "country": "IN",
+      "coord": { "lon": 88.298058, "lat": 22.627501 },
+      "zoom": 12
+    }
+  },
+  {
+    "city": {
+      "id": 2058430,
+      "name": "Whyalla",
+      "findname": "WHYALLA",
+      "country": "AU",
+      "coord": { "lon": 137.583328, "lat": -33.033329 },
+      "zoom": 7
+    }
+  },
+  {
+    "city": {
+      "id": 3579132,
+      "name": "Gustavia",
+      "findname": "GUSTAVIA",
+      "country": "BL",
+      "coord": { "lon": -62.849781, "lat": 17.896179 },
+      "zoom": 8
+    }
+  },
+  {
+    "city": {
+      "id": 1790413,
+      "name": "Xianju",
+      "findname": "XIANJU",
+      "country": "CN",
+      "coord": { "lon": 120.73333, "lat": 28.85 },
+      "zoom": 8
+    }
+  },
+  {
+    "city": {
+      "id": 1850144,
+      "name": "Tōkyō-to",
+      "findname": "TōKYō-TO",
+      "country": "JP",
+      "coord": { "lon": 139.691711, "lat": 35.689499 },
+      "zoom": 1
+    }
+  },
+  {
+    "city": {
+      "id": 5815135,
+      "name": "Washington",
+      "findname": "WASHINGTON",
+      "country": "US",
+      "coord": { "lon": -120.501472, "lat": 47.500118 },
+      "zoom": 1
+    }
+  },
+  {
+    "city": {
+      "id": 5391891,
+      "name": "San Dimas",
+      "findname": "SAN DIMAS",
+      "country": "US",
+      "coord": { "lon": -117.806732, "lat": 34.106682 },
+      "zoom": 12
+    }
+  },
+  {
+    "city": {
+      "id": 141668,
+      "name": "Bandar Emām Khomeynī",
+      "findname": "BANDAR EMāM KHOMEYNī",
+      "country": "IR",
+      "coord": { "lon": 49.076279, "lat": 30.429831 },
+      "zoom": 8
+    }
+  },
+  {
+    "city": {
+      "id": 2410048,
+      "name": "Bo",
+      "findname": "BO",
+      "country": "SL",
+      "coord": { "lon": -11.73833, "lat": 7.96472 },
+      "zoom": 7
+    }
+  },
+  {
+    "city": {
+      "id": 3428577,
+      "name": "San Pedro",
+      "findname": "SAN PEDRO",
+      "country": "AR",
+      "coord": { "lon": -54.108421, "lat": -26.62207 },
+      "zoom": 14
+    }
+  },
+  {
+    "city": {
+      "id": 147059,
+      "name": "Telmankend",
+      "findname": "TELMANKEND",
+      "country": "AZ",
+      "coord": { "lon": 48.399021, "lat": 39.87867 },
+      "zoom": 10
+    }
+  }
+]

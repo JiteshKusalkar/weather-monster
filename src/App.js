@@ -1,26 +1,62 @@
+import styled from 'styled-components';
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { connect } from 'react-redux';
+import { createGlobalStyle } from 'styled-components';
 
-function App() {
+import { deleteCity, fetchCurrentWeatherById } from './actions/currentWeather';
+import Searchbox from './components/Searchbox';
+import CityList from './components/CityList';
+
+const App = props => {
+  const onSuggestionSelect = suggestion => {
+    props.fetchCurrentWeatherById(suggestion.id);
+  };
+
+  const onDeleteCity = id => e => props.deleteCity(id);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Wrapper>
+      <GlobalStyle />
+      <Searchbox id='city-search' onSuggestionSelect={onSuggestionSelect} />
+      <CityList cities={props.cities} onDelete={onDeleteCity} />
+    </Wrapper>
   );
-}
+};
 
-export default App;
+const mapStateToProps = state => ({
+  cities: state.currentWeather.cities
+});
+
+const mapDispatchToProps = dispatch => ({
+  fetchCurrentWeatherById: id => dispatch(fetchCurrentWeatherById(id)),
+  deleteCity: id => dispatch(deleteCity(id))
+});
+
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(App);
+
+const GlobalStyle = createGlobalStyle`
+  body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+      'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+      sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  input {
+    width: 100%;
+    outline: none;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    padding: 10px;
+    line-height: 1;
+  }
+`;
+
+const Wrapper = styled.div`
+  margin-top: 10%;
+`;
