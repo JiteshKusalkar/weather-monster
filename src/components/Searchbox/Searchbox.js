@@ -77,12 +77,18 @@ const Searchbox = ({ id, onSuggestionSelect }) => {
 export default Searchbox;
 
 const Wrapper = styled.div`
+  padding: 10px;
+
   .react-autosuggest {
     &__container {
-      width: 300px;
+      width: 100%;
       margin: 0 auto;
       position: relative;
       padding-right: 20px;
+      
+      @media (min-width: 1024px) {
+        width: 300px;
+      }
     }
 
     &__suggestions-container {

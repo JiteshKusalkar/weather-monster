@@ -17,6 +17,7 @@ const App = props => {
   return (
     <Wrapper>
       <GlobalStyle />
+      <Header>Weather Monster</Header>
       <Searchbox id='city-search' onSuggestionSelect={onSuggestionSelect} />
       <CityList cities={props.cities} onDelete={onDeleteCity} />
     </Wrapper>
@@ -55,6 +56,12 @@ const GlobalStyle = createGlobalStyle`
     padding: 10px;
     line-height: 1;
   }
+`;
+
+const Header = styled.h1`
+  font-size: 40px;
+  font-weight: 400;
+  text-align: center;
 `;
 
 const Wrapper = styled.div`
