@@ -1,5 +1,13 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## Setting up the project
+
+Prerequisite: Install **Node v12.10.0, Yarn v.1.12.1** on your system.
+
+- Run this command - `git clone https://github.com/JiteshKusalkar/weather-monster.git`.
+- Now type `cd weather-monster/` on command line, and run `yarn install`.
+- Your app is ready. Now refer to **Available Scripts** section for running the app and tests.
+
 ## Available Scripts
 
 In the project directory, you can run:
