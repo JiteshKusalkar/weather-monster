@@ -1,7 +1,9 @@
 import styled from 'styled-components';
 import React from 'react';
 
-const unit = process.env.REACT_APP_UNITS === 'imperial' ? 'C' : 'F';
+import { getUnit } from '../../utils/common';
+
+const unit = process.env.REACT_APP_UNITS;
 
 const CityList = ({ cities, onDelete }) => {
   const renderWeatherCard = city => {
@@ -19,24 +21,26 @@ const CityList = ({ cities, onDelete }) => {
             <WeatherIcon key={`icon-${name}-${elem.id}`} icon={elem.icon} />
           ))}
           <CurrentTemperature>{temp}</CurrentTemperature>
-          <Unit size='lg'>{unit}</Unit>
+          <Unit size='lg'>{getUnit(unit)}</Unit>
         </TemperatureSummary>
         <Divider />
         <Temperature>
           <Label>Min.</Label>
           <Value>{min}</Value>
-          <Unit size='sm'>{unit}</Unit>
+          <Unit size='sm'>{getUnit(unit)}</Unit>
         </Temperature>
         <Temperature>
           <Label>Max.</Label>
           <Value>{max}</Value>
-          <Unit size='sm'>{unit}</Unit>
+          <Unit size='sm'>{getUnit(unit)}</Unit>
         </Temperature>
       </WeatherCard>
     );
   };
 
-  return cities && <Wrapper>{cities.map(renderWeatherCard)}</Wrapper>;
+  return cities && !!cities.length ? (
+    <Wrapper>{cities.map(renderWeatherCard)}</Wrapper>
+  ) : null;
 };
 
 export default CityList;
@@ -47,7 +51,7 @@ const Wrapper = styled.div`
   margin: 30px;
 `;
 
-const WeatherCard = styled.div`
+export const WeatherCard = styled.div`
   box-shadow: 0 6px 7px 0 rgba(0, 151, 182, 0.3);
   padding: 20px;
   background-color: #0097b6;
@@ -76,13 +80,13 @@ const CurrentTemperature = styled.div`
   }
 `;
 
-const Unit = styled.span`
+export const Unit = styled.span`
   font-size: ${props => `${props.size === 'lg' ? '40px' : '20px'}`};
   margin: 0;
   vertical-align: top;
 `;
 
-const WeatherIcon = styled.div`
+export const WeatherIcon = styled.div`
   width: 45px;
   height: 45px;
   background: ${props => `

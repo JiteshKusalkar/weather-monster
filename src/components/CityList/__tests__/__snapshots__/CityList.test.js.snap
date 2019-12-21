@@ -1,0 +1,5 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Snapshot: CityList should match the snapshot for "empty props" 1`] = `ShallowWrapper {}`;
+
+exports[`Snapshot: CityList should match the snapshot for "valid props" 1`] = `ShallowWrapper {}`;

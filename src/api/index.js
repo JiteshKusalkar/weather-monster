@@ -8,8 +8,8 @@ const lang = process.env.REACT_APP_LANG;
 
 export const getParams = param => ({
   appid: apiKey || '',
+  units,
   ...(mode === 'json' ? {} : { mode }),
-  ...(units === 'metric' ? {} : { units }),
   ...(lang === 'en' ? {} : { lang }),
   ...param
 });

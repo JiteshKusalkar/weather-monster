@@ -7,7 +7,7 @@ import { deleteCity, fetchCurrentWeatherById } from './actions/currentWeather';
 import Searchbox from './components/Searchbox';
 import CityList from './components/CityList';
 
-const App = props => {
+export const App = props => {
   const onSuggestionSelect = suggestion => {
     props.fetchCurrentWeatherById(suggestion.id);
   };

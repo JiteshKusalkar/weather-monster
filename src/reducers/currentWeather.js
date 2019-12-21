@@ -1,6 +1,5 @@
 import produce from 'immer';
 import {
-  FETCH_CURRENT_WEATHER_REQUEST,
   FETCH_CURRENT_WEATHER_FAILURE,
   ADD_CITY,
   DELETE_CITY
@@ -16,10 +15,6 @@ const initialState = {
 export const currentWeatherReducer = (state = initialState, action) =>
   produce(state, draftState => {
     switch (action.type) {
-      case FETCH_CURRENT_WEATHER_REQUEST:
-        draftState.isFetching = true;
-        return;
-
       case FETCH_CURRENT_WEATHER_FAILURE:
         draftState.isFetching = true;
         draftState.error = action.error;
@@ -29,7 +24,7 @@ export const currentWeatherReducer = (state = initialState, action) =>
         const isExist = draftState.cities.find(
           city => action.payload.id === city.id
         );
-        draftState.isFetching = false;
+        draftState.isFetching = true;
         if (!isExist) {
           draftState.cities = draftState.cities
             .concat(action.payload)
