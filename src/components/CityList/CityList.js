@@ -5,10 +5,6 @@ const unit = process.env.REACT_APP_UNITS === 'imperial' ? 'C' : 'F';
 
 const CityList = ({ cities, onDelete }) => {
   const renderWeatherCard = city => {
-    if (!city) {
-      return <NoData key={`no-data-${city.id}`}>Nothing to display</NoData>;
-    }
-
     const {
       name,
       main: { temp, temp_min: min, temp_max: max },
@@ -123,4 +119,3 @@ const Value = styled.span`
 `;
 
 const Label = styled.div``;
-const NoData = styled.div``;
