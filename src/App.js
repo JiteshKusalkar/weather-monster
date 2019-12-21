@@ -7,6 +7,8 @@ import { deleteCity, fetchCurrentWeatherById } from './actions/currentWeather';
 import Searchbox from './components/Searchbox';
 import CityList from './components/CityList';
 
+import 'font-awesome/css/font-awesome.min.css';
+
 export const App = props => {
   const onSuggestionSelect = suggestion => {
     props.fetchCurrentWeatherById(suggestion.id);

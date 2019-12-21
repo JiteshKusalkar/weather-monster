@@ -34,6 +34,13 @@ const Searchbox = ({ id, onSuggestionSelect }) => {
     return <Suggestion dangerouslySetInnerHTML={{ __html: suggestionLabel }} />;
   };
 
+  const renderInputComponent = inputProps => (
+    <div>
+      <input {...inputProps} />
+      <Icon className='fa fa-search' aria-hidden='true' />
+    </div>
+  );
+
   const onChange = (event, { newValue }) => {
     setValue(newValue);
   };
@@ -68,6 +75,7 @@ const Searchbox = ({ id, onSuggestionSelect }) => {
         onSuggestionSelected={onSuggestionSelected}
         shouldRenderSuggestions={value => true}
         focusInputOnSuggestionClick={false}
+        renderInputComponent={renderInputComponent}
         inputProps={inputProps}
       />
     </Wrapper>
@@ -78,6 +86,7 @@ export default Searchbox;
 
 const Wrapper = styled.div`
   padding: 10px;
+  display: flex;
 
   .react-autosuggest {
     &__container {
@@ -85,7 +94,7 @@ const Wrapper = styled.div`
       margin: 0 auto;
       position: relative;
       padding-right: 20px;
-      
+
       @media (min-width: 1024px) {
         width: 300px;
       }
@@ -115,3 +124,8 @@ const Wrapper = styled.div`
 `;
 
 const Suggestion = styled.div``;
+const Icon = styled.i`
+  position: absolute;
+  top: 10px;
+  right: 10px;
+`;
